@@ -1,4 +1,5 @@
 -- a TYPE DECLARATION
+-- a TYPE SIGNATURE of a function
 -- Int is a TYPE
 addThree :: Int -> Int -> Int -> Int
 

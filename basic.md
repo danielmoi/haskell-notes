@@ -28,3 +28,27 @@ NAME)
 - a typeclass is a sort of interface that defines some behaviour
 - if "a type is part of a typeclass", this means:
   - "it supports and implements the behaviour the typeclass describes"
+
+## Infix
+The `==` operator is actually a function.
+
+So are `+`, `-`, `*`, `/` - and pretty much all operators.
+
+If a function is comprised only of special characters, it is considered an INFIX function by default
+
+We surround an infix function in parentheses if we want to
+- examine its type
+- pass it to another function
+- call it as a PREFIX function
+
+
+## Class constraint
+```
+ghci> :t (==)
+(==) :: (Eq a) => a -> a -> Bool
+```
+
+Everything before the `=>` symbol is called a CLASS CONSTRAINT
+
+
+The type of `a` must be a member of the `Eq` class
